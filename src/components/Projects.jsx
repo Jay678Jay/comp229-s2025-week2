@@ -3,7 +3,7 @@ export default function Projects() {
         <div>
             <h1>Projects</h1>
             <ul>
-                <li>Teaching comp229</li>
+                <li>Comp229</li>
                 <li>Developing new Software</li>
             </ul>
         </div>
