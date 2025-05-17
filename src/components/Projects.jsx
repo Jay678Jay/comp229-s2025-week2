@@ -7,9 +7,7 @@ export default function Projects() {
         <div>
             <h1>Projects</h1>
             <p style={{ fontSize: '25px' }}><strong>These are my projects from the first and second semesters :</strong></p>
-
             
-
             <div className="project">
             <img src={library} alt="Library Management System" className="project-image" />
             <div className="project-details">
