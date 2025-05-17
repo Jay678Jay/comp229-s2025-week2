@@ -96,7 +96,7 @@ button {
   gap: 1em;
   margin-top: 1em;
   text-align: center;
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .image {
@@ -104,6 +104,41 @@ button {
   height: auto;
   border-radius: 20px;
 }
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 35px;
+  padding: 15px;
+  border: 2px solid #02a6ff;
+  border-radius: 10px;
+  background-color: #e3f0ff; 
+  box-shadow: 0 10px 10px #00a6ff1a; 
+}
+
+.project-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  padding: 1.5rem;
+
+}
+
+.project-details {
+  max-width: 700px;
+}
+
+.project-details h2 {
+  margin-top: 0;
+  font-size: 25px
+}
+
+.project-details p {
+  font-size: 20px;
+  line-height: 20px;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
