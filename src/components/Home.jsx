@@ -2,7 +2,8 @@ export default function Home() {
     return (
     <div>
         <h1>Home</h1>
-        <p>Welcome to my portfolio.</p>
+        
+        <p style={{ fontSize: '2.5rem' }}><strong>Welcome to my portfolio!</strong></p>
     </div>
 )
 }
