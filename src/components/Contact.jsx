@@ -1,5 +1,42 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        alert("Thank you, your message has been sent."); 
+        navigate("/");
+    };
+
     return (
-    <h1>Contact</h1>
+
+    <div className="contact-page">
+        <h1>Contact</h1>
+        <div class="contact-info">
+            <p><strong>Name:</strong> Jongwon Lee</p>
+            <p><strong>Email:</strong> jlee678@my.centennialcollege.ca</p>
+            <p><strong>Phone:</strong> 647-123-4567</p>
+        </div>
+
+        <div className="contact-form">
+        <p>If you have any questions, please leave your contact information and message:</p>
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            
+            <label htmlFor="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+            
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            
+            <label htmlFor="message">Message:</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        </div>
+    </div> 
+
 )
 }
