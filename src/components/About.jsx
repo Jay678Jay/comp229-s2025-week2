@@ -6,7 +6,7 @@
 
 // About page with personal information, imaeg and resume link
 
-import image from '../../images/image.png';
+import image from '../assets/image.png';
 
 export default function About() {
     return (

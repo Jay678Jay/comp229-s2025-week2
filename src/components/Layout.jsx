@@ -6,7 +6,7 @@
 
 // Layout/Navigation with Links and Logo
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.jpg";
+import logo from "../assets/logo.jpg";
 
 
 export default function Layout() {
