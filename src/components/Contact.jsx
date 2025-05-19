@@ -24,7 +24,6 @@ export default function Contact() {
         <div class="contact-info">
             <p><strong>Name:</strong> Jongwon Lee</p>
             <p><strong>Email:</strong> jlee678@my.centennialcollege.ca</p>
-            <p><strong>Phone:</strong> 647-123-4567</p>
         </div>
 
         {/* Contact form */}
