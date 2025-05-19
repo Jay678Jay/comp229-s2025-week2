@@ -1,3 +1,8 @@
+// File Name: MainRouter.jsx
+// Student Name: Jongwon Lee
+// Student ID: 401380980
+// Date: May 18, 2025
+
 import { Routes, Route } from "react-router-dom"
 import Layout from "./components/Layout"
 import Home from "./components/Home"

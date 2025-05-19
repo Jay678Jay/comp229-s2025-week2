@@ -5,9 +5,9 @@
 
 // Services page with images and descriptions of services offered
 
-import web from "../../webDev.jpg";
-import mobile from "../../mobileApp.jpg";
-import program from "../../programming.jpg";
+import web from "../../images/webDev.jpg";
+import mobile from "../../images/mobileApp.jpg";
+import program from "../../images/programming.jpg";
 
 export default function Services() {
     return (

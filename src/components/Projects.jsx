@@ -5,9 +5,9 @@
 
 // Projects page with project descriptions and images
 
-import nintendo from "../../nintendo.jpg";
-import restaurant from "../../restaurant.jpg";
-import library from "../../library.jpg";
+import nintendo from "../../images/nintendo.jpg";
+import restaurant from "../../images/restaurant.jpg";
+import library from "../../images/library.jpg";
 
 export default function Projects() {
     return (
