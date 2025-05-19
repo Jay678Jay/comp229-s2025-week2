@@ -1,10 +1,18 @@
+/* File Name: index.css */
+/* Student Name: Jongwon Lee */
+/* Student ID: 301480980 */
+/* Date: May 18, 2025 */
+
+
+/* CSS */
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffffde;
   background-color: #242424;
 
   font-synthesis: none;
@@ -43,6 +51,7 @@ button {
   transition: border-color 0.25s;
 }
 
+/* Header and Logo */
 
 .logo-header {
   display: flex;
@@ -69,7 +78,7 @@ button {
   height: auto;
 }
 
-
+/* Navigation */
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -83,12 +92,14 @@ button {
   font-size: 30px;
 }
 
+/* About page */
 .image {
   width: 300px;
   height: auto;
   border-radius: 20px;
 }
 
+/* Projects page */
 .project {
   display: flex;
   align-items: flex-start;
@@ -123,6 +134,7 @@ button {
   line-height: 30px;
 }
 
+/* Services Page */
 .services-page {
   padding: 10px;
   max-width: 900px;
@@ -140,6 +152,7 @@ button {
   background-color: #ecf4fd;;
 }
 
+/* Contact Page */
 .contact-page {
   max-width: 800px;
   margin: 30px auto;
@@ -161,7 +174,7 @@ button {
   color: #000000;
 }
 
-
+/* Contact Form */
 .contact-form {
   background-color: #ecf4fd;
   border: 2px solid #02a6ff;

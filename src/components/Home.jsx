@@ -1,3 +1,9 @@
+// File Name: Home.jsx
+// Student Name: Jongwon Lee
+// Student ID: 401380980
+// Date: May 18, 2025
+
+// Home page with welcome message 
 export default function Home() {
     return (
     <div>

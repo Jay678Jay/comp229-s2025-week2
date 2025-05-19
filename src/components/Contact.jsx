@@ -1,3 +1,11 @@
+// File Name: Contact.jsx
+// Student Name: Jongwon Lee
+// Student ID: 401380980
+// Date: May 18, 2025
+
+
+// Contact page with contact information and a form
+
 import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
@@ -12,12 +20,14 @@ export default function Contact() {
 
     <div className="contact-page">
         <h1>Contact</h1>
+        {/* Contact information */}
         <div class="contact-info">
             <p><strong>Name:</strong> Jongwon Lee</p>
             <p><strong>Email:</strong> jlee678@my.centennialcollege.ca</p>
             <p><strong>Phone:</strong> 647-123-4567</p>
         </div>
 
+        {/* Contact form */}
         <div className="contact-form">
         <p>If you have any questions, please leave your contact information and message:</p>
         <form onSubmit={handleSubmit}>

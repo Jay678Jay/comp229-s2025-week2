@@ -1,3 +1,10 @@
+// File Name: Layout.jsx
+// Student Name: Jongwon Lee
+// Student ID: 401380980
+// Date: May 18, 2025
+
+
+// Layout/Navigation with Links and Logo
 import { Link } from "react-router-dom";
 import logo from "../../logo.jpg";
 

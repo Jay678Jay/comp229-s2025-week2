@@ -1,3 +1,11 @@
+// File Name: About.jsx
+// Student Name: Jongwon Lee
+// Student ID: 401380980
+// Date: May 18, 2025
+
+
+// About page with personal information, imaeg and resume link
+
 import image from '../../image.png';
 
 export default function About() {
