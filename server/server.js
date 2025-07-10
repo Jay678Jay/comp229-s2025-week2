@@ -2,10 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import contactsRouter from './routes/contacts.js';
 import usersRouter from './routes/users.js';
+import dotenv from 'dotenv';
+dotenv.config();
   
 
 
-mongoose.connect('mongodb+srv://jlee678:ofUaY67Zv3qruWDC@cluster0.riktwqd.mongodb.net/')
+mongoose.connect('')
 const connection = mongoose.connection;
 connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 connection.once('open', () => {
