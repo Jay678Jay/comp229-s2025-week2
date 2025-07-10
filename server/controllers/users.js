@@ -1,4 +1,5 @@
 import UsersModel from '../models/users.js';
+import generateToken from '../utils/jwt.js';
 
 export const getAllUsers = async (req, res) => {
     try {
@@ -21,12 +22,16 @@ export const getUsersById = async (req, res) => {
     }
 }
 
-// Register(create a new user
+// Register(create a new user)
 export const createUser = async (req, res) => {
     try {
         const newUser = new UsersModel(req.body);
         const savedUser = await newUser.save();
-        res.status(201).json(savedUser);
+        
+        // Generate JWT token after user registration
+        const token = generateToken(savedUser)
+
+        res.status(201).json({message: 'User registered successfully', user: savedUser, token});
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -41,10 +46,13 @@ export const signInUser = async (req, res) => {
             return res.status(404).json({ message: "User not found" });
         }
         const isPasswordValid = await user.comparePassword(password);
+
         if (!isPasswordValid) {
             return res.status(401).json({ message: "Invalid password" });
         }
-        res.status(200).json({ message: "Login successful", user});
+        const token = generateToken(user); 
+        
+        res.status(200).json({ message: "Login successful", user, token});
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
