@@ -20,14 +20,6 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    created: {
-        type: Date, 
-        default: Date.now,
-    },
-    updated: {
-        type: Date,   
-        default: Date.now,
-    },
 });
 
 usersSchema.pre('save', async function(next) {

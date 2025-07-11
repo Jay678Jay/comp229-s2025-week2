@@ -10,17 +10,19 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import Services from "./components/Services"
 import Projects from "./components/Projects"
+import Signup from "./components/Signup"
 
-const MainRouter = () => {
+const MainRouter = ({ user, handleLogout }) => {
     return (
         <div>
-            <Layout />
+            <Layout user={user} handleLogout={handleLogout} />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/signup" element={<Signup />} />
             </Routes>
         </div>
     )

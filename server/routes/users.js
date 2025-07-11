@@ -7,6 +7,7 @@ router.get('/', getAllUsers);
 
 router.get('/:id', getUsersById);
 
+//register a new user
 router.post('/', createUser);
 
 router.put('/:id', updateUser);

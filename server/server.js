@@ -26,6 +26,9 @@ app.use('/health', (req, res) => {res.status(200).json({ message: 'Server is run
 app.use('/api/contacts', contactsRouter);
 app.use('/api/users', usersRouter);
 
+app.use('/api/data', (req, res) => {
+  res.status(200).json({ message: '' });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

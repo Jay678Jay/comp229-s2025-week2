@@ -13,11 +13,12 @@
     "start": "node server/server.js"
   },
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "dotenv": "^17.2.0",
     "jsonwebtoken": "^9.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.0"
+    "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
