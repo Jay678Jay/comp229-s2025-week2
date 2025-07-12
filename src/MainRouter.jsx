@@ -11,8 +11,9 @@ import Contact from "./components/Contact"
 import Services from "./components/Services"
 import Projects from "./components/Projects"
 import Signup from "./components/Signup"
+import Signin from "./components/Signin"
 
-const MainRouter = ({ user, handleLogout }) => {
+const MainRouter = ({ user, handleLogout, setUser }) => {
     return (
         <div>
             <Layout user={user} handleLogout={handleLogout} />
@@ -23,9 +24,10 @@ const MainRouter = ({ user, handleLogout }) => {
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/signin" element={<Signin setUser={setUser} />} />
             </Routes>
         </div>
     )
 }
 
-export default MainRouter
+export default MainRouter;

@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <MainRouter user={user} handleLogout={handleLogout}/>
+    <MainRouter user={user} handleLogout={handleLogout} setUser={setUser} />
   );
 }
 
