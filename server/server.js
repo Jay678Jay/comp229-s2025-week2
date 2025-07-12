@@ -6,6 +6,7 @@ import usersRouter from './routes/users.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import ProjectRouter from './routes/project.js';
 
 mongoose.connect('mongodb+srv://jlee678:ofUaY67Zv3qruWDC@cluster0.riktwqd.mongodb.net/')
 const connection = mongoose.connection;
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {res.status(200).json({ message: 'Welcome to My Portf
 app.use('/health', (req, res) => {res.status(200).json({ message: 'Server is running' });});
 app.use('/api/contacts', contactsRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/projects', ProjectRouter);
 
 app.use('/api/data', (req, res) => {
   res.status(200).json({ message: '' });

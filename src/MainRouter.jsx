@@ -10,8 +10,11 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import Services from "./components/Services"
 import Projects from "./components/Projects"
+import ProjectsList from "./components/Project-list"
 import Signup from "./components/Signup"
 import Signin from "./components/Signin"
+
+
 
 const MainRouter = ({ user, handleLogout, setUser }) => {
     return (
@@ -21,6 +24,7 @@ const MainRouter = ({ user, handleLogout, setUser }) => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/projects-list" element={<ProjectsList />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/signup" element={<Signup />} />
