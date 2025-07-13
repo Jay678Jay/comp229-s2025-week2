@@ -35,19 +35,19 @@ export default function Layout({ user, handleLogout }) {
               <Link className="nav-link" to="/about">About Me</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects">Projects</Link>
+              <Link className="nav-link" to="/projects">MyProjects</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/services">Services</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/contact-list">Contact</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects-list">UserProjects</Link>
+              <Link className="nav-link" to="/projects-list">Project</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/education-list">UserEducation</Link>
+              <Link className="nav-link" to="/education-list">Education</Link>
             </li>
           </ul>
 

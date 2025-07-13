@@ -9,7 +9,7 @@ router.get('/', getAllContacts);
 
 router.get('/:id', getContactsById);
 
-router.post('/', authMiddleware, createContact);
+router.post('/', authMiddleware, adminAuth, createContact);
 
 router.put('/:id', authMiddleware, adminAuth, updateContact);
 
