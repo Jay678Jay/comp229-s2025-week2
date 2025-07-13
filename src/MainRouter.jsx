@@ -14,7 +14,8 @@ import ProjectsList from "./components/Project-list"
 import ProjectDetails from "./components/Project-details";
 import Signup from "./components/Signup"
 import Signin from "./components/Signin"
-
+import EducationList from './components/Education-list';
+import EducationDetails from './components/Education-details';
 
 
 const MainRouter = ({ user, handleLogout, setUser }) => {
@@ -31,6 +32,8 @@ const MainRouter = ({ user, handleLogout, setUser }) => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signin" element={<Signin setUser={setUser} />} />
+                <Route path="/education-list" element={<EducationList />} />
+                <Route path="/education-details/:id?" element={<EducationDetails />} />
             </Routes>
         </div>
     )

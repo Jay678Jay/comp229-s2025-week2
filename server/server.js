@@ -7,6 +7,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import ProjectRouter from './routes/project.js';
+import educationRouter from './routes/education.js';
+
+
 
 mongoose.connect('mongodb+srv://jlee678:ofUaY67Zv3qruWDC@cluster0.riktwqd.mongodb.net/')
 const connection = mongoose.connection;
@@ -27,6 +30,7 @@ app.use('/health', (req, res) => {res.status(200).json({ message: 'Server is run
 app.use('/api/contacts', contactsRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/projects', ProjectRouter);
+app.use('/api/education', educationRouter);
 
 app.use('/api/data', (req, res) => {
   res.status(200).json({ message: '' });

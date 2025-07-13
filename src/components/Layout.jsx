@@ -4,48 +4,78 @@
 // Date: May 18, 2025
 
 
-// Layout/Navigation with Links and Logo
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 
-
 export default function Layout({ user, handleLogout }) {
   return (
-    <>
-      <div className="logo-header">
-        <h1>
-          Jongwon Lee <img src={logo} alt="Logo" className="logo" /> Portfolio
-        </h1>
+    <div className="App">
+
+      <div style={{
+        backgroundColor: "#a6c8ff",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "20px 40px"
+      }}>
+        <h2 style={{ margin: 0 }}>Jongwon Lee</h2>
+        <img src={logo} alt="Logo" style={{ height: "60px" }} />
+        <h2 style={{ margin: 0 }}>Portfolio</h2>
       </div>
 
-      <div>
-        <nav className="nav-links" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          
-          <div style={{ display: "flex", gap: "15px" }}>
-            <Link to="/">Home</Link>
-            <Link to="/about">About Me</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/projects-list">Manage Projects</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
-          
-          <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light px-4 shadow-sm">
+        <Link className="navbar-brand" to="/">My Portfolio</Link>
 
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About Me</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/projects">Projects</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services">Services</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/projects-list">UserProjects</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/education-list">UserEducation</Link>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav ms-auto">
             {user ? (
               <>
-                <span className="navbar-text me-3">Welcome, {user.user}</span>
-                <button className="btn btn-outline-danger" onClick={handleLogout}>Logout</button>
+                <li className="nav-item d-flex align-items-center">
+                  <span className="navbar-text me-3">Welcome, {user.user}</span>
+                </li>
+                <li className="nav-item">
+                  <button className="btn btn-outline-danger" onClick={handleLogout}>
+                    Logout
+                  </button>
+                </li>
               </>
             ) : (
               <>
-                <Link to="/signup">Signup</Link>
-                <Link to="/signin">Signin</Link>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">Signup</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signin">Signin</Link>
+                </li>
               </>
             )}
-          </div>
-        </nav>
-      </div>
-    </>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }
