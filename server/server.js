@@ -6,6 +6,13 @@ import usersRouter from './routes/users.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Create _dirname equivalent for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 import ProjectRouter from './routes/project.js';
 import educationRouter from './routes/education.js';
 
@@ -34,6 +41,11 @@ app.use('/api/education', educationRouter);
 
 app.use('/api/data', (req, res) => {
   res.status(200).json({ message: '' });
+});
+
+app.use(express.static(path.join(__dirname, '../dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
