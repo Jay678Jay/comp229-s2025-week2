@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
 
 const contactsSchema = new mongoose.Schema({
-    firstname: {
+    name: {
         type: String,
         required: true,
     }, 
-    lastname: {
+
+    phone: {
         type: String,
         required: true,
     },
@@ -14,6 +15,10 @@ const contactsSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    message: {
+    type: String,
+    required: true,
+    }
 });
 
 export default mongoose.model('Contacts', contactsSchema);

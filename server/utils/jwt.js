@@ -7,6 +7,7 @@ const generateToken = (user) => {
             id: user._id,
             email: user.email,
             username: user.name,
+            role: user.role
         },
         process.env.JWT_SECRET,
         {

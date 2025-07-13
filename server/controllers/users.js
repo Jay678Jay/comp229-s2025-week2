@@ -25,7 +25,10 @@ export const getUsersById = async (req, res) => {
 // Register(create a new user)
 export const createUser = async (req, res) => {
     try {
-        const newUser = new UsersModel(req.body);
+        const newUser = new UsersModel({
+            ...req.body,
+            role: 'user' // Default role is user
+        });
         const savedUser = await newUser.save();
         
         // Generate JWT token after user registration
